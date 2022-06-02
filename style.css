@@ -42,12 +42,18 @@ img {
 button,
 input {
     font-family: inherit;
-    font-size: 12px;
+    font-size: 0.75rem;
     background-color: transparent;
     border: none;
     outline: none;
     cursor: pointer;
 }
+
+p,
+h2 {
+    color: var(--text-color);
+}
+
 
 /* RESUABLE CLASSES */
 
@@ -58,6 +64,18 @@ input {
 .container {
     padding: 0 1.5rem;
     margin: 0 auto;
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 2.5rem;
 }
 
 
@@ -119,7 +137,7 @@ input {
     max-height: 0;
     overflow: hidden;
     transition: max-height .35s;
-    margin-top: 2.5rem;
+    /* margin-top: 2.5rem; */
     margin-right: 0.438rem;
 }
 
@@ -145,3 +163,34 @@ input {
     color: var(--primary-color);
 }
 
+.hero {
+    background-color: #F9F9FF;
+}
+
+.hero-container {
+    padding: 9.25rem 3.938rem 16.625rem 1.5rem;
+}
+
+.hero-tagline {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.438rem;
+}
+
+.hero-tagline span {
+    color: var(--primary-color);
+}
+
+.hero-text {
+    color: var(--text-color);
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.063rem;
+    margin-top: 1rem;
+    padding-right: 2.938rem;
+}
+
+.hero-button {
+    width: max-content;
+    margin-top: 2.5rem;
+}
