@@ -194,3 +194,32 @@ h2 {
     width: max-content;
     margin-top: 2.5rem;
 }
+
+.qualities-container {
+    margin-top: 1rem;
+    gap: 2.5rem;
+}
+
+.quality-1,
+.quality-2 {
+    place-items: center;
+    text-align: center;
+}
+
+.quality-title {
+    margin-top: 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.813rem;
+}
+
+.quality-text {
+    margin-top: 1.5rem;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
+}
+
+.qualities-container .button {
+    margin-top: 2rem;
+}
