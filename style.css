@@ -163,6 +163,8 @@ h2 {
     color: var(--primary-color);
 }
 
+/* Hero */
+
 .hero {
     background-color: #F9F9FF;
 }
@@ -200,6 +202,8 @@ h2 {
     gap: 2.5rem;
 }
 
+/* Qualities */
+
 .quality-1,
 .quality-2 {
     place-items: center;
@@ -222,4 +226,66 @@ h2 {
 
 .qualities-container .button {
     margin-top: 2rem;
+}
+
+/* Get started */
+
+.get-started {
+    background-color: #F9F9FF;
+    margin-top: 1rem;
+}
+
+.get-started-title {
+    padding-top: 2.5rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.813rem;
+    text-align: center;
+}
+
+.get-started-text-content {
+    display: flex;
+    flex-direction: row;
+    gap: 2.188rem;
+    margin-top: 2.5rem;
+    padding-bottom: 3.063rem;
+}
+
+.numbers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.numbers p {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    line-height: 1.813rem;
+}
+
+.numbers .line {
+    padding-block: 0.313rem;
+}
+
+.text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.text-group .text h3 {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+}
+
+.text-group .text p {
+    color: var(--text-color);
+    margin-top: 0.813rem;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 0.938rem;
 }
