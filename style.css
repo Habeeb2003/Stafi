@@ -444,12 +444,14 @@ h2 {
     line-height: 24px;
     transition: all ease-in-out .25s;
 }
-
+.faq-show .faq-list-text{
+  display: block;
+}
 .dropdown {
     transition: all ease-in-out .25s;
 }
 
-.activated .dropdown {
+.faq-show .dropdown {
     transform: rotate(180deg);
     transition: all ease-in-out .25s;
 }
@@ -826,7 +828,7 @@ h2 {
     margin-top: 16px;
 }
 
-.checkboxId p {
+.checkboxId {
     margin: 0;
 }
 
