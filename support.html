@@ -15,45 +15,52 @@
     <!-- Header -->
 
     <header id="header">
-
-        <nav class="navbar container">
-                <a href="home.html" class="logo">
-                    <img src="./asset/png/logo-small.png" alt="Stafi logo" class="logo-image">
-                </a>
     
-                <button class="menu-toggler">
-                    <img src="./asset/svg/menu.svg" alt="" class="open-menu-icon toggle-icon">
-                    <img src="./asset/svg/x.svg" alt=""
-                    class="close-menu-icon toggle-icon">
-                </button>
-            
-
+        <nav class="navbar container">
+            <a href="home.html" class="logo">
+                <img src="./asset/png/logo-small.png" alt="Stafi logo" class="logo-image">
+            </a>
+    
+            <button class="menu-toggler">
+                <img src="./asset/svg/menu.svg" alt="" class="open-menu-icon toggle-icon">
+                <img src="./asset/svg/x.svg" alt="" class="close-menu-icon toggle-icon">
+            </button>
+    
+    
             <div class="collapsible-menu">
-
+    
                 <ul class="list">
-
+    
                     <li class="list-item">
-                        <a href="home.html" class="list-link">Home</a>
+                        <a href="home.html" class="list-link current-link">Home</a>
                     </li>
-                    <li class="list-item">
+                    <li class="list-item small-screen">
                         <a href="signup.html" class="list-link">Register</a>
                     </li>
-                    <li class="list-item">
+                    <li class="list-item small-screen">
                         <a href="login.html" class="list-link">Log in</a>
                     </li>
                     <li class="list-item">
                         <a href="about.html" class="list-link">About</a>
                     </li>
                     <li class="list-item">
-                        <a href="support.html" class="list-link current-link">Support</a>
+                        <a href="support.html" class="list-link">Support</a>
                     </li>
-
+    
+                    <li class="list-item big-screen">
+                        <a href="login.html" class="list-link">Log in</a>
+                    </li>
+    
+                    <li class="list-item big-screen">
+                        <a href="signup.html" class="list-link get-started-btn">Get Started</a>
+                    </li>
+    
                 </ul>
-
+    
             </div>
-
+    
         </nav>
-
+    
     </header>
 
     <section class="support">
@@ -61,6 +68,10 @@
         <div class="overlay"></div>
 
         <div class="container support-container">
+
+            <div class="support-image big-screen">
+                <img src="./asset/png/logo big.png" alt="">
+            </div>
 
             <h2 class="support-title">
                 Experiencing an issue? <br> Talk to support
@@ -83,10 +94,10 @@
                     <textarea class="textarea" placeholder="Type here" required></textarea>
                 </div>
 
-                    <div class="btns">
-                        <button type="submit" class="button submit-button">Submit</button>
-                        <a href="./home.html" class="go-home">Go back Home</a>
-                    </div>
+                <div class="btns">
+                    <button type="submit" class="button submit-button">Submit</button>
+                    <a href="./home.html" class="go-home small-screen">Go back Home</a>
+                </div>
 
             </form>
 

@@ -8,9 +8,60 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>Sign up</title>
+    <title>Log In</title>
 </head>
 <body id="login-body">
+
+    <!-- Header -->
+
+    <header id="header" class="header big-screen">
+    
+        <nav class="navbar container">
+            <a href="home.html" class="logo">
+                <img src="./asset/png/logo-small.png" alt="Stafi logo" class="logo-image">
+            </a>
+    
+            <button class="menu-toggler">
+                <img src="./asset/svg/menu.svg" alt="" class="open-menu-icon toggle-icon">
+                <img src="./asset/svg/x.svg" alt="" class="close-menu-icon toggle-icon">
+            </button>
+    
+    
+            <div class="collapsible-menu">
+    
+                <ul class="list">
+    
+                    <li class="list-item">
+                        <a href="home.html" class="list-link">Home</a>
+                    </li>
+                    <li class="list-item small-screen">
+                        <a href="signup.html" class="list-link">Register</a>
+                    </li>
+                    <li class="list-item small-screen">
+                        <a href="login.html" class="list-link">Log in</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="about.html" class="list-link">About</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="support.html" class="list-link">Support</a>
+                    </li>
+    
+                    <li class="list-item big-screen">
+                        <a href="login.html" class="list-link current-link">Log in</a>
+                    </li>
+    
+                    <li class="list-item big-screen">
+                        <a href="signup.html" class="list-link get-started-btn">Get Started</a>
+                    </li>
+    
+                </ul>
+    
+            </div>
+    
+        </nav>
+    
+    </header>
 
     <!-- Sign up -->
 
@@ -20,10 +71,10 @@
 
             <div class="signup-tagline d-grid">
                 <img src="./asset/png/logo big.png" alt="">
-                <p>Create your free stacfi account</p>
+                <p>Log into your stacfi account</p>
             </div>
 
-            <div class="details">
+            <form class="details">
 
                 <div class="username">
                     <p>Username</p>
@@ -31,23 +82,28 @@
                 </div>
 
                 <div class="password">
-                    <p>Password</p>
+                    <div class="password-text">
+                        <p>Password</p>
+                        <p class="big-screen forgot-password"><a href="./forgot-password.html">Forgot Password?</a></p>
+                    </div>
+                    
                     <input type="password" name="password" placeholder="Enter Password" required>
                 </div>
 
-                <label for="checkbox" class="checkboxId">checkbox</label>
-                    <input type="checkbox" name="checkboxName" id="checkboxId" class="checkbox-input">
-                    <!-- <div class="checkbox-box"></div> -->
-                    <p> Keep me logged in</p>
+                
+                <div class="checkbox-container">
+                    <input type="checkbox" name="checkbox" value="checkbox">
+                    <label for="checkbox"> Keep me logged in</label>
+                </div>
 
                 <div class="btns">
                     <button class="button">Sign up</button>
                    <span> Don’t have an account? <a href="signup.html" class="go-to-login">Sign up</a> </span>
-                    <a href="./home.html" class="go-home">Go back Home</a>
+                    <a href="./home.html" class="go-home small-screen">Go back Home</a>
                 </div>
                 
 
-            </div>
+            </form>
 
         </div>
 
