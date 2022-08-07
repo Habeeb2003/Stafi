@@ -1,0 +1,143 @@
+main {
+    padding: 0 30px;
+    margin: 0 auto 0 auto;
+}
+
+/* myaccount sect */
+
+.myaccountSect {
+    margin-top: 20px;
+}
+
+.my-account-options li a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.back-dasboard-btn,
+.back-myaccount-btn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(53, 47, 152, 0.05);
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.my-account-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 100px;
+}
+
+.my-account-options li button {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.my-account-options li img {
+    width: 18px;
+}
+
+.edit-profile-sect .info {
+    display: none;
+    margin: 20px 0;
+}
+
+/* edit profile */
+
+.edit-profile-sect {
+    margin-top: 20px;
+}
+
+.success-update {
+    background: rgba(56, 151, 46, 0.1);
+    border-radius: 5px;
+    border-left: 4px solid var(--light-green);
+    color: var(--light-green);
+    padding: 10px;
+}
+
+.error-update {
+    background: var(--light-danger);
+    border-radius: 5px;
+    border-left: 4px solid var(--dark-danger);
+    color: var(--dark-danger);
+    padding: 10px;
+}
+
+.edit-profile-sect form {
+    margin-top: 100px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /* margin: 10px; */
+}
+
+.form-group input {
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.save-btn {
+    background: var(--primary-color);
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.lar-screen{
+    display: none;
+}
+
+.activeLink{
+    color: var(--primary-color);
+}
+
+/* change password*/
+
+/* wallet address */
+
+.edit-profile-sect form {
+    max-width: 500px;
+    margin: 100px auto 0 auto ;
+}
+
+@media only screen and (min-width: 768px) {
+    .lar-screen{
+        display: block;
+    }
+
+    .edit-profile-sect{
+        display: block;
+    }
+
+    .sectionCon{
+        display: grid;
+        grid-template-columns: 1.6fr 3fr;
+    }
+
+    .myaccountSect{
+        border-right: 1px solid var(--light-text-color);
+    }
+
+    .back-myaccount-btn-con{
+        display: none;
+    }
+}

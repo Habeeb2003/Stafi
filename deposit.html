@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="deposit.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <main>
+        <!-- heading -->
+
+        <header id="header">
+
+            <nav class="navbar container">
+                <a href="home.html" class="logo">
+                    <img src="./asset/svg/stacfi-logo.svg" alt="Stafi logo" class="logo-image">
+                </a>
+
+                <div style="display: flex; gap: 20px;">
+                    <button class="depositBtn small-screen">Deposit</button>
+                    <button class="menu-toggler">
+                        <img src="./asset/svg/menu.svg" alt="" class="open-menu-icon toggle-icon">
+                        <img src="./asset/svg/x.svg" alt="" class="close-menu-icon toggle-icon">
+                    </button>
+                </div>
+
+
+                <div class="collapsible-menu">
+
+                    <ul class="list">
+
+                        <li class="list-item">
+                            <a href="home.html" class="list-link">Home</a>
+                        </li>
+                        <li class="list-item small-screen">
+                            <a href="my-account.html" class="list-link">My Account</a>
+                        </li>
+                        <li class="list-item small-screen">
+                            <a href="dashboard.html" class="list-link">Dashboard</a>
+                        </li>
+                        <li class="list-item small-screen">
+                            <a href="stake.html" class="list-link">Stake</a>
+                        </li>
+                        <li class="list-item small-screen">
+                            <a href="deposit.html" class="list-link current-link">Deposit</a>
+                        </li>
+                        <li class="list-item small-screen">
+                            <a href="withdraw.html" class="list-link">Withdraw</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="about.html" class="list-link">About Us</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="support.html" class="list-link">Support</a>
+                        </li>
+
+                        <li class="list-item big-screen">
+                            <a href="login.html" class="list-link">Log Out</a>
+                        </li>
+
+                        <li class="list-item big-screen hide-small">
+                            <a href="deposit.html" class="list-link get-started-btn">Deposit</a>
+                        </li>
+
+                        <li class="list-item big-screen hide-small">
+                            <a href="my-account.html" class="list-link">My Account</a>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+
+            </nav>
+
+        </header>
+
+        <section class="subNav large_screen">
+
+            <ul>
+                <li><a href="/dashboard.html">
+                        <div class="linkTitle">Dashboard</div>
+                        <div class="activeIndicator"></div>
+                    </a></li>
+                <li><a href="/stake.html">
+                        <div class="linkTitle">Stake</div>
+                        <div class="activeIndicator"></div>
+                    </a></li>
+                <li><a href="/deposit.html" class="active">
+                        <div class="linkTitle">Deposit</div>
+                        <div class="activeIndicator"></div>
+                    </a></li>
+                <li><a href="/withdraw.html">
+                        <div class="linkTitle">Withdraw</div>
+                        <div class="activeIndicator"></div>
+                    </a></li>
+            </ul>
+
+        </section>
+
+        <section class="depositSect">
+
+            <div class="depositCon">
+                <div>
+                    <h3 class="title">How to deposit</h3>
+                </div>
+    
+                <div class="stepper">
+    
+                    <span class="num">01</span>
+                    <span class="textStep">Copy Our wallet address below</span>
+    
+                    <div class="line"></div>
+                    <div></div>
+    
+                    <span class="num">02</span>
+                    <span class="textStep">Send deposit amount to our wallet address which you just copied</span>
+                    
+                    <div class="line"></div>
+                    <div></div>
+                    
+                    <span class="num">03</span>
+                    <span class="textStep">Upload payment confirmation screenshot then click <span class="confirm">“Confirm Deposit”</span></span>
+
+                </div>
+
+                <div class="botCon">
+                    <div class="copyCon">
+
+                        <div class="copyArea">096ewfsvgveaknegbiurslibnbtrdigbtmfi</div>
+                        <button>Copy</button>
+        
+                    </div>
+    
+                    <div class="uploadScreenshotCon">
+                        <button onclick="ClickScreenshotInput()">Upload Screenshot</button>
+                        <span>No file choosen</span>
+                        <input type="file" hidden name="" id="screenshotInput">
+                    </div>
+
+                    <button class="confirmDepo" onclick="Deposit()">Confirm Deposit</button>
+                    <p class="leadText">*Deposits may take a few minutes to reflect on your dashboard, please wait.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section hidden class="alert" id="alert">
+            <div class="alert-con">
+                <div>
+                    <img src="/asset/svg/Done.svg" alt="">
+                </div>
+                <h2>Your Deposit will arrive soon</h2>
+                <p>We'll get back to you via email.</p>
+                <a href="dashboard.html">OK</a>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        let screenShotInput = document.getElementById("screenshotInput")
+        let alertCon = document.getElementById("alert")
+
+        function ClickScreenshotInput() {
+            screenShotInput.click()
+        }
+        function Deposit() {
+            alertCon.removeAttribute("hidden")
+            alertCon.style.display = "flex"
+        }
+    </script>
+</body>
+
+</html>

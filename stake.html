@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="stake.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <main>
+        <!-- heading -->
+
+        <header id="header">
+
+            <nav class="navbar container">
+                <a href="home.html" class="logo">
+                    <img src="./asset/svg/stacfi-logo.svg" alt="Stafi logo" class="logo-image">
+                </a>
+
+                <div style="display: flex; gap: 20px;">
+                    <button class="depositBtn small-screen">Deposit</button>
+                    <button class="menu-toggler">
+                        <img src="./asset/svg/menu.svg" alt="" class="open-menu-icon toggle-icon">
+                        <img src="./asset/svg/x.svg" alt="" class="close-menu-icon toggle-icon">
+                    </button>
+                </div>
+
+
+                <div class="collapsible-menu">
+
+                    <ul class="list">
+
+                        <ul class="list">
+
+                            <li class="list-item">
+                                <a href="home.html" class="list-link">Home</a>
+                            </li>
+                            <li class="list-item small-screen">
+                                <a href="my-account.html" class="list-link">My Account</a>
+                            </li>
+                            <li class="list-item small-screen">
+                                <a href="dashboard.html" class="list-link">Dashboard</a>
+                            </li>
+                            <li class="list-item small-screen">
+                                <a href="stake.html" class="list-link current-link">Stake</a>
+                            </li>
+                            <li class="list-item small-screen">
+                                <a href="deposit.html" class="list-link">Deposit</a>
+                            </li>
+                            <li class="list-item small-screen">
+                                <a href="withdraw.html" class="list-link">Withdraw</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="about.html" class="list-link">About Us</a>
+                            </li>
+                            <li class="list-item">
+                                <a href="support.html" class="list-link">Support</a>
+                            </li>
+    
+                            <li class="list-item big-screen">
+                                <a href="login.html" class="list-link">Log Out</a>
+                            </li>
+    
+                            <li class="list-item big-screen hide-small">
+                                <a href="deposit.html" class="list-link get-started-btn">Deposit</a>
+                            </li>
+    
+                            <li class="list-item big-screen hide-small">
+                                <a href="my-account.html" class="list-link">My Account</a>
+                            </li>
+    
+                            </li>
+    
+                        </ul>
+
+                    </ul>
+
+                </div>
+
+            </nav>
+
+        </header>
+
+        <section class="subNav large_screen">
+
+            <ul>
+                <li><a href="/dashboard.html">
+                        <div class="linkTitle">Dashboard</div>
+                        <div class="activeIndicator"></div>
+                    </a></li>
+                <li><a href="/stake.html" class="active">
+                        <div class="linkTitle">Stake</div>
+                        <div class="activeIndicator"></div>
+                    </a></li>
+                <li><a href="/deposit.html">
+                        <div class="linkTitle">Deposit</div>
+                        <div class="activeIndicator"></div>
+                    </a></li>
+                <li><a href="/withdraw.html">
+                        <div class="linkTitle">Withdraw</div>
+                        <div class="activeIndicator"></div>
+                    </a></li>
+            </ul>
+
+        </section>
+
+        <section>
+
+            <div class="stakedOfferTable">
+
+                <div class="title">
+                    <p>Staking Offers</p>
+                </div>
+
+                <div class="mid_screen">
+
+                    <div class="stakeRow">
+                        <div>
+                            <h5>Crypto</h5>
+                        </div>
+                        <div>
+                            <h5>Rewards</h5>
+                        </div>
+                        <div>
+                            <h5>Term</h5>
+                        </div>
+                        <div>
+                            <h5>Est. rate(APY)</h5>
+                        </div>
+                        <div>
+                            <h5>Stake</h5>
+                        </div>
+                    </div>
+    
+                    <div class="stakeRow">
+    
+                        <div class="col1">
+                            <div class="coinLogoCon">
+                                <img src="/asset/png/ethereum-logo.png" alt="ethereum-logo">
+                            </div>
+                            <div class="coinDetailsCon">
+                                <p class="coinShort">ETH</p>
+                                <p class="coinLong">Etherum</p>
+                            </div>
+                        </div>
+    
+                        <div class="col2">
+                            <div class="coinLogoCon">
+                                <img src="/asset/png/ethereum-logo.png" alt="ethereum-logo">
+                            </div>
+                            <div>
+                                <p class="coin">Etherum</p>
+                            </div>
+                        </div>
+    
+                        <div class="col3">
+                            <p>Anually</p>
+                        </div>
+    
+                        <div class="col4">
+                            <p>62%</p>
+                        </div>
+    
+                        <div class="col5">
+                            <button>Stake</button>
+                        </div>
+    
+                    </div>
+    
+                    <div class="stakeRow">
+    
+                        <div class="col1">
+                            <div class="coinLogoCon">
+                                <img src="/asset/png/ethereum-logo.png" alt="ethereum-logo">
+                            </div>
+                            <div class="coinDetailsCon">
+                                <p class="coinShort">ETH</p>
+                                <p class="coinLong">Etherum</p>
+                            </div>
+                        </div>
+    
+                        <div class="col2">
+                            <div class="coinLogoCon">
+                                <img src="/asset/png/ethereum-logo.png" alt="ethereum-logo">
+                            </div>
+                            <div>
+                                <p class="coin">Etherum</p>
+                            </div>
+                        </div>
+    
+                        <div class="col3">
+                            <p>Anually</p>
+                        </div>
+    
+                        <div class="col4">
+                            <p>62%</p>
+                        </div>
+    
+                        <div class="col5">
+                            <button>Stake</button>
+                        </div>
+    
+                    </div>
+    
+                    <div class="stakeRow">
+    
+                        <div class="col1">
+                            <div class="coinLogoCon">
+                                <img src="/asset/png/ethereum-logo.png" alt="ethereum-logo">
+                            </div>
+                            <div class="coinDetailsCon">
+                                <p class="coinShort">ETH</p>
+                                <p class="coinLong">Etherum</p>
+                            </div>
+                        </div>
+    
+                        <div class="col2">
+                            <div class="coinLogoCon">
+                                <img src="/asset/png/ethereum-logo.png" alt="ethereum-logo">
+                            </div>
+                            <div>
+                                <p class="coin">Etherum</p>
+                            </div>
+                        </div>
+    
+                        <div class="col3">
+                            <p>Anually</p>
+                        </div>
+    
+                        <div class="col4">
+                            <p>62%</p>
+                        </div>
+    
+                        <div class="col5">
+                            <button>Stake</button>
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+                <div class="small_screen">
+    
+                    <div class="headTitle">
+                        <p class="textSize">Crypto</p>
+                        <p class="textsize">Rewards</p>
+                    </div>
+    
+                    <div class="roow">
+    
+                        <div class="top">
+                            <!-- <div> -->
+                                <div class="top-left">
+                                    <div class="small_coinLogoCon">
+                                        <img src="/asset/png/luckyBlock.png" alt="ethereum-logo">
+                                    </div>
+                                    <div class="coinDetailsCon">
+                                        <p class="coinShort">LUCK</p>
+                                        <p class="coinLong">Lucky Bluck</p>
+                                    </div>
+                                </div>
+                                <div class="top-center" style="text-align: center;">
+                                    <span class="material-icons">
+                                        arrow_right_alt
+                                    </span>
+                                </div>
+                                <div class="top-right">
+                                    <div class="small_coinLogoCon">
+                                        <img src="/asset/png/luckyBlock.png" alt="ethereum-logo">
+                                    </div>
+                                    <div>
+                                        <p class="coin">LUCK</p>
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+                        </div>
+    
+                        <div class="bottom">
+                            <div class="bottom-left">
+                                <p class="head textSize">Term</p>
+                                <p>6/12 Months</p>
+                            </div>
+                            <div class="bottom-center">
+                                <p class="head textSize">Est. rate (APY)</p>
+                                <p class="percent">22.3/59%</p>
+                            </div>
+                            <div class="bottom-right">
+                                <button class="textSize">Stake</button>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <div class="roow">
+    
+                        <div class="top">
+                            <!-- <div> -->
+                                <div class="top-left">
+                                    <div class="small_coinLogoCon">
+                                        <img src="/asset/png/luckyBlock.png" alt="ethereum-logo">
+                                    </div>
+                                    <div class="coinDetailsCon">
+                                        <p class="coinShort">LUCK</p>
+                                        <p class="coinLong">Lucky Bluck</p>
+                                    </div>
+                                </div>
+                                <div class="top-center" style="text-align: center;">
+                                    <span class="material-icons">
+                                        arrow_right_alt
+                                    </span>
+                                </div>
+                                <div class="top-right">
+                                    <div class="small_coinLogoCon">
+                                        <img src="/asset/png/luckyBlock.png" alt="ethereum-logo">
+                                    </div>
+                                    <div>
+                                        <p class="coin">LUCK</p>
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+                        </div>
+    
+                        <div class="bottom">
+                            <div class="bottom-left">
+                                <p class="head textSize">Term</p>
+                                <p>6/12 Months</p>
+                            </div>
+                            <div class="bottom-center">
+                                <p class="head textSize">Est. rate (APY)</p>
+                                <p class="percent">22.3/59%</p>
+                            </div>
+                            <div class="bottom-right">
+                                <button class="textSize">Stake</button>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                    <div class="roow">
+    
+                        <div class="top">
+                            <!-- <div> -->
+                                <div class="top-left">
+                                    <div class="small_coinLogoCon">
+                                        <img src="/asset/png/luckyBlock.png" alt="ethereum-logo">
+                                    </div>
+                                    <div class="coinDetailsCon">
+                                        <p class="coinShort">LUCK</p>
+                                        <p class="coinLong">Lucky Bluck</p>
+                                    </div>
+                                </div>
+                                <div class="top-center" style="text-align: center;">
+                                    <span class="material-icons">
+                                        arrow_right_alt
+                                    </span>
+                                </div>
+                                <div class="top-right">
+                                    <div class="small_coinLogoCon">
+                                        <img src="/asset/png/luckyBlock.png" alt="ethereum-logo">
+                                    </div>
+                                    <div>
+                                        <p class="coin">LUCK</p>
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+                        </div>
+    
+                        <div class="bottom">
+                            <div class="bottom-left">
+                                <p class="head textSize">Term</p>
+                                <p>6/12 Months</p>
+                            </div>
+                            <div class="bottom-center">
+                                <p class="head textSize">Est. rate (APY)</p>
+                                <p class="percent">22.3/59%</p>
+                            </div>
+                            <div class="bottom-right">
+                                <button class="textSize">Stake</button>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

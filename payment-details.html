@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="payment-details.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Forgot Password</title>
+</head>
+
+<body>
+
+    <main>
+
+        <!-- Header -->
+
+        <header id="header">
+
+            <nav class="navbar container">
+                <a href="home.html" class="logo">
+                    <img src="./asset/svg/stacfi-logo.svg" alt="Stafi logo" class="logo-image">
+                </a>
+
+                <div style="display: flex; gap: 20px;">
+                    <button class="depositBtn small-screen">Deposit</button>
+                    <button class="menu-toggler">
+                        <img src="./asset/svg/menu.svg" alt="" class="open-menu-icon toggle-icon">
+                        <img src="./asset/svg/x.svg" alt="" class="close-menu-icon toggle-icon">
+                    </button>
+                </div>
+
+
+                <div class="collapsible-menu">
+
+                    <ul class="list">
+
+                        <li class="list-item">
+                            <a href="home.html" class="list-link">Home</a>
+                        </li>
+                        <li class="list-item small-screen">
+                            <a href="my-account.html" class="list-link">My Account</a>
+                        </li>
+                        <li class="list-item small-screen">
+                            <a href="dashboard.html" class="list-link">Dashboard</a>
+                        </li>
+                        <li class="list-item small-screen">
+                            <a href="stake.html" class="list-link">Stake</a>
+                        </li>
+                        <li class="list-item small-screen">
+                            <a href="deposit.html" class="list-link">Deposit</a>
+                        </li>
+                        <li class="list-item small-screen">
+                            <a href="withdraw.html" class="list-link">Withdraw</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="about.html" class="list-link">About Us</a>
+                        </li>
+                        <li class="list-item">
+                            <a href="support.html" class="list-link">Support</a>
+                        </li>
+
+                        <li class="list-item big-screen">
+                            <a href="login.html" class="list-link">Log Out</a>
+                        </li>
+
+                        <li class="list-item big-screen hide-small">
+                            <a href="deposit.html" class="list-link get-started-btn">Deposit</a>
+                        </li>
+
+                        <li class="list-item big-screen hide-small">
+                            <a href="my-account.html" class="list-link">My Account</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </nav>
+
+        </header>
+
+        <div class="sectionCon">
+            <section class="myaccountSect lar-screen">
+
+                <div>
+                    <a href="dashboard.html" style="width: fit-content;" class="back-dasboard-btn">
+                        <span class="material-icons">keyboard_backspace</span>
+                        <span>Dashboard</span>
+                    </a>
+                </div>
+    
+                <ul class="my-account-options">
+                    <li><a href="my-account.html">
+                            <span class="material-icons">person</span>
+                            <span>Edit Profile</span>
+                        </a></li>
+                    <li><a href="change-password.html">
+                        <span class="material-icons">lock</span>
+                            <span>Change Password</span>
+                        </a></li>
+                    <li><a href="payment-details.html" class="activeLink">
+                        <span class="material-icons">account_balance_wallet</span>
+                            <span>Payment Details</span>
+                        </a></li>
+                </ul>
+    
+            </section>
+    
+            <section class="wallet-address-sect">
+
+                <div class="info">
+                    <div class="success-update">
+                        <p>Success</p>
+                    </div>
+                    <div class="error-update">
+                        <p>Error</p>
+                    </div>
+                </div>
+    
+                <div class="back-myaccount-btn-con">
+                    <button onclick="BackToMyAccount()" class="back-myaccount-btn">
+                        <span class="material-icons">keyboard_backspace</span>
+                        <span>My Account</span>
+                    </button>
+                </div>
+    
+                <form>
+    
+                    <div class="form-group">
+                        <label for="username">BTC Wallet Address</label>
+                        <input type="text" name="username" placeholder="Confirm New Password" id="">
+                    </div>
+    
+                    <div>
+                        <button type="button" onclick="Save()" class="save-btn">Save</button>
+                    </div>
+    
+                </form>
+    
+            </section>
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+    <script>
+        let successInfo = document.querySelector(".success-update")
+        let errorInfo = document.querySelector(".error-update")
+        let myAccountSect = document.querySelector(".myaccountSect")
+        let changePasswordSect = document.querySelector(".wallet-address-sect")
+
+        function Save() {
+            successInfo.style.display = "block"
+        }
+
+        function BackToMyAccount() {
+           myAccountSect.style.display = "block"
+           changePasswordSect.style.display = "none" 
+        }
+    </script>
+
+</body>
+
+</html>

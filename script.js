@@ -1,5 +1,6 @@
 const menuToggler = document.querySelector('.menu-toggler');
 const navbar = document.querySelector('.navbar');
+const depositBtn = document.querySelector('.depositBtn');
 const collapsibleMenu = document.querySelector('.collapsible-menu');
 
 let popup = document.querySelector('.popup');
@@ -17,6 +18,8 @@ faqListItems.forEach((element) => {
 
 menuToggler.addEventListener('click', () => {
   navbar.classList.toggle('show-menu');
+  if (depositBtn != null) 
+    depositBtn.classList.toggle('hide-depositBtn')
 });
 
 // // Popup
