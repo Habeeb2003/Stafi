@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User Dashboard</title>
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="variables.css">
     <link rel="stylesheet" href="dashboard.css">
@@ -172,6 +172,9 @@
                         <div>
                             <h5>Est. rate(APY)</h5>
                         </div>
+                        <div>
+                            <h5>Withdraw</h5>
+                        </div>
                     </div>
 
                     <div class="stakeRow">
@@ -201,6 +204,10 @@
 
                         <div class="col4">
                             <p>62%</p>
+                        </div>
+
+                        <div class="col5">
+                            <button onclick="OpenModal()">Withdraw</button>
                         </div>
 
                     </div>
@@ -252,6 +259,9 @@
                                 <p class="head textSize">Est. rate (APY)</p>
                                 <p class="percent">22.3/59%</p>
                             </div>
+                            <div class="bottom-right">
+                                <button onclick="OpenModal()">Withdraw</button>
+                            </div>
                         </div>
 
                     </div>
@@ -262,10 +272,39 @@
 
         </section>
 
+        <section class="withdraw-modal-con" id="withdraw-modal-con">
+            <div class="withdraw-modal">
+                <div class="modal-heading">
+                    <h2>Withdraw to balance</h2>
+                    <span onclick="CloseModal()" class="material-icons">close</span>
+                </div>
+
+                <form>
+                    <p>Are you sure you want to withdraw</p>
+                    <p class="mid-text"><span class="amount-with">0.54 ETH</span> to your balance?</p>
+                    <button class="suc-btn">Yes</button>
+                    <button class="err-btn">No</button>
+                </form>
+            </div>
+        </section>
+
     </main>
 
     
     <script src="script.js"></script>
+
+    <script>
+        let withdrawModalCon = document.getElementById("withdraw-modal-con")
+
+        function OpenModal() {
+            withdrawModalCon.style.display = "flex"
+        }
+
+        function CloseModal() {
+            withdrawModalCon.style.display = "none"
+        }
+
+    </script>
 </body>
 
 </html>

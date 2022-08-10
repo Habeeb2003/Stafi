@@ -117,7 +117,8 @@ header {
     gap: 8px;
 }
 
-.coinDetailsCon .coinShort, .col2 .coin  {
+.coinDetailsCon .coinShort,
+.col2 .coin {
     font-weight: 400;
     font-size: 16px;
     line-height: 20px
@@ -137,7 +138,8 @@ header {
 }
 
 .col3,
-.col4, .subNav li a {
+.col4,
+.subNav li a {
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
@@ -147,7 +149,7 @@ header {
     color: var(--light-green);
 }
 
-.col5 button{
+.col5 button {
     background-color: var(--primary-color);
     color: white;
     padding: 10px 20px;
@@ -226,7 +228,7 @@ header {
     outline: none;
 }
 
-.headTitle{
+.headTitle {
     padding: 8px 20px;
     border-bottom: 1px solid var(--light-text-color);
     display: grid;
@@ -237,41 +239,113 @@ header {
     display: none;
 }
 
-.mid_screen{
+.mid_screen {
     display: none;
 }
 
-@media only screen and (min-width: 670px){
+.stake-modal-con {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 5;
+    padding: 20px;
+}
+
+.stake-modal {
+    background-color: white;
+    padding: 30px;
+    width: 405px;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.stake-modal form .title{
+    font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+margin: 10px 0;
+}
+
+.stake-modal form .amu{
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.modal-heading {
+    color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-type, .input-type1 {
+    border: 2px solid var(--light-text-color);
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.input-type1{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.forGroup{
+    margin-top: 15px;
+}
+
+.sta-btn {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+@media only screen and (min-width: 670px) {
     .dashboardSect .statsGrid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .mid_screen{
+    .mid_screen {
         display: block;
     }
-    
-    .small_screen{
+
+    .small_screen {
         display: none;
     }
 }
 
-@media only screen and (min-width: 1024px){
-    .col5 button{
+@media only screen and (min-width: 1024px) {
+    .col5 button {
         font-size: 17px;
     }
-    
+
     .dashboardSect .statsGrid {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .coinDetailsCon .coinShort, .col2 .coin  {
+    .coinDetailsCon .coinShort,
+    .col2 .coin {
         font-weight: 400;
         font-size: 20px;
         line-height: 24px
     }
 
     .col3,
-    .col4, .subNav li a {
+    .col4,
+    .subNav li a {
         font-weight: 400;
         font-size: 18px;
         line-height: 22px;
@@ -286,13 +360,13 @@ header {
         /* remove this*/
     }
 
-    .large_screen{
+    .large_screen {
         display: block;
     }
 }
 
-@media only screen and (min-width: 1200px){
-    main{
+@media only screen and (min-width: 1200px) {
+    main {
         max-width: 1000px;
     }
 }
