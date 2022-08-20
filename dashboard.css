@@ -351,9 +351,25 @@ header {
     background-color: var(--light-green);
 }
 
+.ca-indic [data-bs-target]  {
+    background: var(--primary-color) !important;
+}
+
+.ca-indic button {
+    width: 10px !important;
+    height: 10px !important;
+    box-sizing: border-box !important;
+    border: none !important;
+}
+
+
 @media only screen and (min-width: 670px) {
     .dashboardSect .statsGrid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .ca-indic button {
+        width: 15px !important;
+        height: 15px !important;
     }
 }
 
@@ -397,10 +413,26 @@ header {
         max-width: 600px;
         padding: 35px;
     }
+    .ca-indic button {
+        width: 15px !important;
+        height: 15px !important;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
     main {
         max-width: 1000px;
     }
+    .ca-indic button {
+        width: 15px !important;
+        height: 15px !important;
+    }
 }
+
+/* carousel extra styles*/
+
+
+
+/* .ca-indic {
+    height: 20px !important;
+} */
