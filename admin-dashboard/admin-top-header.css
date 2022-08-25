@@ -1,0 +1,174 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    font-family: Inter;
+}
+
+button,
+input {
+    font-family: inherit;
+    font-size: 0.75rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+    outline: none;
+}
+
+.main-con {
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        "topNav topNav"
+        "view view"
+    ;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+.top-nav-sect {
+    grid-area: topNav;
+    background-color: white;
+    border-bottom: 1px solid var(--light-text-color);
+}
+
+.top-nav-sect nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    color: var(--text-color);
+}
+
+.right-t{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.top-nav-sect .navbrand-con {
+    display: none;
+    align-items: center;
+    gap: 20px;
+}
+
+.bold-text{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.side-nav-sect {
+    z-index: 10;
+}
+
+.view-sect {
+    grid-area: view;
+    overflow: scroll;
+}
+
+/* toggle */
+
+.menu-toggler {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+}
+
+.toggle-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity .25s;
+}
+
+.close-menu-icon {
+    opacity: 0;
+}
+
+
+.show-menu .close-menu-icon {
+    opacity: 1;
+}
+
+.show-menu .open-menu-icon {
+    opacity: 0;
+    transition-delay: none;
+}
+
+.collapsible-menu {
+    display: none;
+    transition: all ease-in-out .25s;
+}
+
+.show-menu .collapsible-menu {
+    display: block;
+    position: absolute;
+    top: 70px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--primary-color);
+    color: white;
+    transition: all ease-in-out .25s;
+}
+
+.logo_div{
+    display: none;
+}
+
+.show-menu .navbrand-con, .show-menu .right-t {
+    display: none;
+}
+
+.show-menu .logo_div {
+    display: inline;
+} 
+
+@media only screen and (min-width: 670px) {
+    .main-con {
+        height: 100vh;
+        display: grid;
+        grid-template-areas:
+            "topNav topNav"
+            "sideNav view"
+        ;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto 1fr;
+    }
+
+    .top-nav-sect .navbrand-con {
+        display: flex;
+    }
+
+    .menu-toggler {
+        display: none;
+    }
+
+    .side-nav-sect {
+        position: static;
+        grid-area: sideNav;
+        background: var(--primary-color);
+        color: white;
+    }
+
+    .collapsible-menu {
+        display: block;
+    }
+}

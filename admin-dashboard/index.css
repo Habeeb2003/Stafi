@@ -1,0 +1,58 @@
+.view-sect {
+    padding: 30px;
+    overflow: auto;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.card div p {
+    margin-bottom: 10px;
+    max-width: 50%;
+}
+
+.card-1 {
+    background: var(--primary-color);
+}
+
+.card-2 {
+    background: var(--light-green);
+}
+
+.card-3 {
+    background: #E9910D;
+}
+
+.card-4 {
+    color: var(--primary-color);
+}
+
+.card .amount {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: right;
+}
+
+@media only screen and (min-width: 670px) {
+    
+}

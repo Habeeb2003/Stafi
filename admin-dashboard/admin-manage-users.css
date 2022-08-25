@@ -1,0 +1,586 @@
+.view-sect {
+    overflow: auto;
+    margin-bottom: 30px;
+}
+
+.view-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.view-heading .input-con {
+    display: grid;
+    grid-template-columns: 1fr 0.1fr;
+    align-items: center;
+    border: 2px solid var(--light-text-color);
+    padding: 5px 5px 5px 10px;
+    border-radius: 6px;
+}
+
+.view-heading ul {
+    display: flex;
+    list-style: none;
+}
+
+.view-heading li .active {
+    color: var(--primary-color)
+}
+
+.view-heading li a {
+    color: var(--text-color);
+}
+
+.view-heading li .active div:last-child {
+    margin: auto;
+    width: 50px;
+    border-top: 2px solid var(--primary-color);
+}
+
+.view-heading li {
+    display: flex;
+    flex-direction: column;
+}
+
+.view-heading a .linkTitle {
+    padding: 20px 20px 10px 20px;
+}
+
+.view-body {
+    margin: 30px;
+}
+
+/* table styles */
+.actions .edit-btn {
+    border: 1px solid rgba(53, 47, 152, 0.5);
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+}
+
+.actions .delete-btn {
+    padding: 5px 7px;
+    background: var(--dark-danger);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.actions .confirm-bn {
+    background: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.actions {
+    display: flex !important;
+    gap: 10px;
+    justify-content: right;
+    padding-right: 20px !important;
+}
+
+/* ta styles*/
+
+/* Responsive */
+
+@media (max-width: 767px) {
+
+    .view-heading {
+        padding: 0 10px 10px 10px;
+        display: block;
+    }
+
+    .view-heading .input-con {
+        margin-top: 10px;
+    }
+
+    .view-heading a .linkTitle {
+        padding: 20px 10px 10px 10px;
+    }
+
+    .fl-table th:last-child {
+        text-align: left;
+        padding-right: 20px;
+    }
+
+    .view-body {
+        margin: 10px;
+    }
+
+    .actions {
+        justify-content: left;
+    }
+
+    .mod-body {
+        max-width: 330px;
+        display: grid;
+        grid-template-columns: 1fr !important;
+        gap: 25px;
+        max-height: calc(80vh - 40px);
+        overflow: auto;
+        margin-bottom: 40px;
+    }
+
+    .staked-coin-con {
+        margin-bottom: 20px;
+    }
+
+    .delete-mod {
+        max-width: 360px;
+        padding: 10px 20px !important;
+        border-radius: 10px;
+    }
+}
+
+
+/* user edit pop up */
+
+.edit-user-pop-up,
+.delete-user-pop-up,
+.confirm-deposit-pop-up {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.1);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.mod {
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    height: 80vh;
+    max-height: 80vh;
+}
+
+.mod-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mod-head h2 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--primary-color);
+}
+
+.mod-body {
+    width: 650px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.confirm-deposit-pop-up .mod-body {
+    display: block;
+    width: 300px;
+}
+
+.mod-body form {
+    margin-top: 20px;
+}
+
+.mod-body .form_group {
+    margin-bottom: 10px;
+}
+
+.mod-body .form_group label {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--text-color);
+}
+
+.mod-body .form_group input,
+.mod-body .form_group select,
+.input-like {
+    padding: 13px;
+    margin-top: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.update-btn,
+.confirm-btn {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    background: var(--primary-color);
+    color: white;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+    margin-top: 70px;
+}
+
+/*deposit modal*/
+
+.mod-deposit {
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    max-height: 80vh;
+}
+
+.con-btn,
+.no-con-btn {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.con-btn {
+    margin-top: 15px;
+    background: var(--primary-color);
+    color: white;
+}
+
+.no-con-btn {
+    border: 1px solid var(--dark-danger);
+    color: var(--dark-danger);
+    margin-top: 10px;
+}
+
+.depo-shot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.depo-shot p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.depo-shot button {
+    color: var(--primary-color);
+}
+
+
+/* user staked coin (pop up) */
+
+.user-staked-coins {
+    margin-top: 26px;
+}
+
+.user-staked-coins h2 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.staked-coin-con {
+    border: 2px solid var(--light-text-color);
+    border-radius: 10px;
+    height: 63.8vh;
+    /* max-height: 97%; */
+    overflow: auto;
+}
+
+.staked-coin-con .sta {
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.staked-coin-con .sta img {
+    width: 35px;
+    height: 35px;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.staked-coin-con .sta div {
+    display: flex;
+    flex-direction: column;
+}
+
+.sta:not(:last-child) {
+    border-bottom: 1px solid var(--light-text-color);
+}
+
+.staked-coin-con p:first-child {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.staked-coin-con p:last-child {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.52px;
+    color: var(--light-text-color);
+}
+
+/* delete mod */
+
+.delete-mod {
+    width: 380px;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.delete-mod-body {
+    margin-top: 5px;
+}
+
+.delete-user-name-con {
+    border: 1px solid var(--light-text-color);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.err-btn,
+.suc-btn {
+    color: white;
+    width: 100%;
+    padding: 10px 0px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 7px 0;
+}
+
+.err-btn {
+    background-color: var(--dark-danger);
+}
+
+.suc-btn {
+    margin-top: 15px;
+    background-color: var(--light-green);
+}
+
+/* manage coin extra styles */
+
+.add_btn {
+    background: var(--primary-color);
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.col_2 {
+    display: flex;
+    gap: 10px;
+}
+
+.coinLogoCon {
+    width: 40px;
+    height: 40px;
+}
+
+.coinLogoCon img {
+    width: 100%;
+    height: 100%;
+}
+
+.coinDetailsCon {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.coinShort {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px
+}
+
+.coinDetailsCon .coinLong {
+    color: var(--light-text-color);
+}
+
+.t-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.col_3 {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.coin_t .edit-btn {
+    padding: 8px 10px;
+}
+
+/* wallet address info */
+
+.wallet-wrapper {
+    padding: 30px;
+}
+
+.wallet-con {
+    max-width: 370px;
+    margin: auto;
+}
+
+.barc-img {
+    padding: 20px;
+    border: 2px dashed black;
+    width: fit-content;
+    margin: auto;
+}
+
+.wall-btn {
+    width: fit-content;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.wall-btn-con {
+    text-align: center;
+}
+
+/* new table */
+
+table {
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  table * {
+    position: relative;
+  }
+  table td, table th {
+    padding-left: 8px;
+  }
+  table thead tr {
+    height: 60px;
+    background: var(--primary-color);
+    font-size: 16px;
+    color: white;
+  }
+  table tbody tr {
+    height: 48px;
+    border-bottom: 1px solid #E3F1D5;
+  }
+  table tbody tr:last-child {
+    border: 0;
+  }
+  table td, table th {
+    text-align: left;
+  }
+  table td.l, table th.l {
+    text-align: right;
+  }
+  table td.c, table th.c {
+    text-align: center;
+  }
+  table td.r, table th.r {
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 35.5em) {
+    table {
+      display: block;
+    }
+    table > *, table tr, table td, table th {
+      display: block;
+    }
+    table thead {
+      display: none;
+    }
+    table tbody tr {
+      height: auto;
+      padding: 8px 0;
+    }
+    table tbody tr td {
+      padding-left: 40%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      /* margin-bottom: 12px; */
+    }
+    table tbody tr td:last-child {
+      margin-bottom: 0;
+    }
+    table tbody tr td:before {
+      position: absolute;
+      font-weight: 700;
+      width: 35%;
+      left: 10px;
+      top: 0;
+      background: var(--primary-color);
+      color: white;
+      padding: 10px;
+    }
+    table tbody tr td:nth-child(1):before {
+        height: 100%;
+        content: "Username";
+    }
+    table tbody tr td:nth-child(2):before {
+        height: 100%;
+        content: "Email";
+    }
+    table tbody tr td:nth-child(3):before {
+        height: 100%;
+        content: "Status";
+    }
+    table tbody tr td:nth-child(4):before {
+        height: 100%;
+        content: "Actions";
+    }
+    /* table tbody tr td:nth-child(5):before {
+      content: "Box Type";
+    } */
+
+    .ig-1:before{
+        content: "ID" !important;
+    } 
+
+    .ig-2:before{
+        height: 100%;
+        content: "Coin Name" !important;
+    } 
+
+    .ig-3:before{
+        height: 100%;
+        content: "" !important;
+    }
+    .ig-4:before{
+        content: "APY" !important;
+    } 
+    .ig-5:before{
+        height: 100%;
+        content: "" !important;
+    } 
+    .ig-6:before{
+        height: 100%;
+        content: "Actions" !important;
+    }  
+  }

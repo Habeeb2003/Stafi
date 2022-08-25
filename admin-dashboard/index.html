@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin-side-nav.css">
+    <link rel="stylesheet" href="admin-top-header.css">
+    <link rel="stylesheet" href="../variables.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+
+    <section class="main-con navbar-res">
+
+        <section class="top-nav-sect">
+            <nav class="">
+                <div class="logo_div">
+                    <img style="width: 120px;" src="../asset/svg/stacfi-logo.svg" alt="">
+                </div>
+                <button class="menu-toggler">
+                    <img src="../asset/svg/menu.svg" alt="" class="open-menu-icon toggle-icon">
+                    <img src="../asset/svg/x.svg" alt="" class="close-menu-icon toggle-icon">
+                </button>
+                <div class="navbrand-con">
+                    <img style="width: 120px;" src="../asset/svg/stacfi-logo.svg" alt="">
+                    <p class="bold-text">Admin</p>
+                </div>
+
+                <div class="right-t">
+                    <button><img src="../asset/svg/bell.svg" alt=""></button>
+                    <span class="bold-text">Admin</span>
+                </div>
+            </nav>
+        </section>
+
+        <section class="side-nav-sect collapsible-menu">
+            <nav class="side">
+                <ul>
+
+                    <li>
+                        <a href="index.html" class="bold active">
+                            <span><img src="../asset/svg/admin-home.svg" alt=""></span>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-manage-users.html" class="bold">
+                            <span><img src="../asset/svg/manage-users.svg" alt=""></span>
+                            <span>Manage Users</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-manage-deposits.html" class="bold">
+                            <span><img src="../asset/svg/manage-deposits.svg" alt=""></span>
+                            <span>Manage Deposits</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-manage-withdrawals.html" class="bold">
+                            <span><img src="../asset/svg/manage-withdrawals.svg" alt=""></span>
+                            <span>Manage Withdrawals</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-manage-coin.html" class="bold">
+                            <span><img src="../asset/svg/manage-coins.svg" alt=""></span>
+                            <span>Manage Coins</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-payment-wallet-info.html" class="bold">
+                            <span><img src="../asset/svg/payment-info.svg" alt=""></span>
+                            <span>Payment wallet info</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </section>
+
+        <section class="view-sect">
+
+            <div class="card-grid">
+
+                <div class="card card-1">
+                    <div>
+                        <img src="../asset/svg/total-users.svg" alt="">
+                        <p>Total Users</p>
+                    </div>
+                    <p class="amount">120</p>
+                </div>
+
+                <div class="card card-2">
+                    <div>
+                        <img src="../asset/svg/active-users.svg" alt="">
+                        <p>Active Users</p>
+                    </div>
+                    <p class="amount">120</p>
+                </div>
+
+                <div class="card card-3">
+                    <div>
+                        <img src="../asset/svg/inactive-users.svg" alt="">
+                        <p>Inactive Users</p>
+                    </div>
+                    <p class="amount">120</p>
+                </div>
+
+                <div class="card card-4">
+                    <div>
+                        <img src="../asset/svg/total-stakeable.svg" alt="">
+                        <p>Total Stakable Coin</p>
+                    </div>
+                    <p class="amount">120</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </section>
+
+    <script src="./admin-script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+.side li {}
+
+.side .bold {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.side li a {
+    display: flex;
+    gap: 20px;
+    padding: 13px 20px 13px 30px;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.side ul {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.side .active {
+    background: rgba(249, 249, 255, 0.2);
+}

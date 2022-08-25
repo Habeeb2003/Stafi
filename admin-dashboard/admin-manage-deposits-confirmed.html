@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin-side-nav.css">
+    <link rel="stylesheet" href="admin-top-header.css">
+    <link rel="stylesheet" href="../variables.css">
+    <link rel="stylesheet" href="admin-manage-users.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Admin Dashboard | Confirmed deposits</title>
+</head>
+
+<body>
+
+    <section class="main-con navbar-res">
+
+        <section class="top-nav-sect">
+            <nav class="">
+                <div class="logo_div">
+                    <img style="width: 120px;" src="../asset/svg/stacfi-logo.svg" alt="">
+                </div>
+                <button class="menu-toggler">
+                    <img src="../asset/svg/menu.svg" alt="" class="open-menu-icon toggle-icon">
+                    <img src="../asset/svg/x.svg" alt="" class="close-menu-icon toggle-icon">
+                </button>
+                <div class="navbrand-con">
+                    <img style="width: 120px;" src="../asset/svg/stacfi-logo.svg" alt="">
+                    <p class="bold-text">Admin</p>
+                </div>
+
+                <div class="right-t">
+                    <button><img src="../asset/svg/bell.svg" alt=""></button>
+                    <span class="bold-text">Admin</span>
+                </div>
+            </nav>
+        </section>
+
+        <section class="side-nav-sect collapsible-menu">
+            <nav class="side">
+                <ul>
+
+                    <li>
+                        <a href="index.html" class="bold">
+                            <span><img src="../asset/svg/admin-home.svg" alt=""></span>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-manage-users.html" class="bold">
+                            <span><img src="../asset/svg/manage-users.svg" alt=""></span>
+                            <span>Manage Users</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-manage-deposits.html" class="bold active">
+                            <span><img src="../asset/svg/manage-deposits.svg" alt=""></span>
+                            <span>Manage Deposits</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-manage-withdrawals.html" class="bold">
+                            <span><img src="../asset/svg/manage-withdrawals.svg" alt=""></span>
+                            <span>Manage Withdrawals</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-manage-coin.html" class="bold">
+                            <span><img src="../asset/svg/manage-coins.svg" alt=""></span>
+                            <span>Manage Coins</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-payment-wallet-info.html" class="bold">
+                            <span><img src="../asset/svg/payment-info.svg" alt=""></span>
+                            <span>Payment wallet info</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </section>
+
+        <section class="view-sect">
+
+            <div class="view-heading">
+                <ul>
+                    <li>
+                        <a href="admin-manage-deposits.html" class="">
+                            <div class="linkTitle">Pending</div>
+                            <div class="activeIndicator"></div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admin-manage-deposits-confirmed.html" class="active">
+                            <div class="linkTitle">Confirmed</div>
+                            <div class="activeIndicator"></div>
+                        </a>
+                    </li>
+                </ul>
+
+                <div>
+                    <div class="input-con">
+                        <input type="text" name="" placeholder="Search email or username" id="">
+                        <img src="../asset/svg/search.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="view-body">
+
+
+                <div class="table-wrapper">
+                    <table class="fl-table">
+                        <thead>
+                            <tr>
+                                <th>Username</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Abdulsalam Abubakar</td>
+                                <td>1.2345 BTC</td>
+                                <td>Confirmed</td>
+                                <td class="actions">
+                                    <button onclick="openDeleteDepositModal()" class="delete-btn"><img src="../asset/svg/Delete.svg" alt=""></button>
+                                </td>
+                            </tr>
+                        <tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="confirm-deposit-pop-up" id="confirmDepositPopUp">
+
+            <div>
+
+                <div class="mod-deposit">
+
+                    <div class="mod-head">
+                        <h2>Confirm this deposit</h2>
+                        <button onclick="closeEditModal()"><img src="../asset/svg/close.svg" alt=""></button>
+                    </div>
+
+                    <div class="mod-body">
+
+                        <form>
+
+                            <div class="form_group">
+                                <label for="">Username</label><br>
+                                <div class="input-like">
+                                    onis
+                                </div>
+                            </div>
+                            <div class="form_group">
+                                <label for="">Deposit</label><br>
+                                <div class="input-like">
+                                    onis
+                                </div>
+                            </div>
+                            <div class="form_group">
+                                <label for="">New Balance</label><br>
+                                <div class="input-like">
+                                    1.2345 BTC
+                                </div>
+                            </div>
+                            <div class="form_group">
+                                <label for="username">Deposit screenshot</label><br>
+                                <div class="input-like depo-shot">
+                                    <p>Screenshot_20220822.... eduhdsrhihirfhdxuiuigedyeydxfyuyfdsyydufgyyufgyudyugyuyu</p>
+                                    <button>Download</button>
+                                </div>
+                            </div>
+
+                            <div>
+                                <button class="con-btn">Confirm</button>
+                                <button class="no-con-btn">No, Don't confirm</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="delete-user-pop-up" id="deleteUserPopUp">
+
+            <div>
+
+                <div class="delete-mod">
+
+                    <div class="mod-head">
+                        <h2>Delete this deposit?</h2>
+                        <button onclick="closeDeleteDepositModal()"><img src="../asset/svg/close.svg" alt=""></button>
+                    </div>
+
+                    <div class="delete-mod-body">
+                        <p>Are you sure you want to delete this deposit</p>
+                        <div class="delete-user-name-con">
+                            <p>1.2345 BTC</p>
+                        </div>
+                        <button onclick="closeDeleteDepositModal()" class="suc-btn">Yes</button>
+                        <button onclick="closeDeleteDepositModal()" class="err-btn">No</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </section>
+
+
+    <script>
+
+        let confirmDepositModal = document.getElementById("confirmDepositPopUp")
+        let deleteDepositModal = document.getElementById("deleteUserPopUp")
+
+        function openConfirmDepositModal() {
+            confirmDepositModal.style.display = "flex"
+        }
+
+        function closeEditModal() {
+            confirmDepositModal.style.display = 'none';
+        }
+
+        function openDeleteDepositModal() {
+            deleteDepositModal.style.display = "flex"
+        }
+
+        function closeDeleteDepositModal() {
+            deleteDepositModal.style.display = 'none';
+        }
+
+    </script>
+
+    <script src="admin-script.js"></script>
+
+</body>
+
+</html>
